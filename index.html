@@ -43,10 +43,7 @@
                     return place.city.match(regex) || place.state.match(regex);
                 });
         }
-        
-            
-           
-
+        // practice calling:  findMatch('bos', cities);
 
     // 3. Change numbers to have commas
         function numberWithCommas(x) {
@@ -54,8 +51,14 @@
         }
 
     // 4.  Need to display the matched array to the DOM
+        function displayMatch(){
+            const searchWord = this.value;
+            // console.log('searched word:', searchWord);
 
             // 1. call word match function with given input
+            const matchArray = findMatch(searchWord, cities);
+                // console.log(matchArray); //just making sure it workd
+
 
                 // console.log(searchArray); //got data
 
@@ -66,9 +69,12 @@
             // 3. display on suggestions portion
 
                 // console.log(html);
+        }
  
 
     // Call the functions with event handlers
+    search.addEventListener('change', displayMatch);
+    search.addEventListener('keyup', displayMatch);
     </script>
 </body>
 
