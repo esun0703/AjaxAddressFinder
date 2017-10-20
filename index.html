@@ -20,17 +20,43 @@
     // variable to hold our array
     const cities = []
 
-    // Need to make an ajax call with fetch to get list of cities
-        // need to take that list of cities and push it to the array 'cities';
+    // grab classes
+    const search = document.querySelector('.search')
+    const suggestions = document.querySelector('.suggestions');
 
-    // Need to take a word and filter array of cities to find entries that match
+    // 1. Need to make an AJAX call with FETCH to get list of cities
+            // retreive information in json format
+            // need to take that list of cities and push it to the array 'cities';
+        // console.log(cities) //check to see if cities has been updated
 
 
-    // Need to display the matched array to the DOM
+    // 2. Need to take a word and filter array of cities to find entries that match
+            // console.log(matchedWord);
+            // filter through the cities array
+                // need a regex so you can input variable into match
+
+
+    // 3. Change numbers to have commas
+        function numberWithCommas(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        }
+
+    // 4.  Need to display the matched array to the DOM
+
+            // 1. call word match function with given input
+
+                // console.log(searchArray); //got data
+
+            // 2. iterate through the new array to create entries
+
+                    // new list items for each place
+
+            // 3. display on suggestions portion
+
+                // console.log(html);
+ 
 
     // Call the functions with event handlers
-
-
     </script>
 </body>
 
