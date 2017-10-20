@@ -56,19 +56,25 @@
             // console.log('searched word:', searchWord);
 
             // 1. call word match function with given input
-            const matchArray = findMatch(searchWord, cities);
-                // console.log(matchArray); //just making sure it workd
+                const matchArray = findMatch(searchWord, cities);
+                    // console.log(matchArray); //just making sure it workd
 
-
-                // console.log(searchArray); //got data
-
-            // 2. iterate through the new array to create entries
-
+            // 2. iterate through the new array to create entries and join so that each entry is a string
+                const html = matchArray.map(place => {
+                    // console.log(place);
                     // new list items for each place
+                    return (
+                        `<li>
+                            <span class="name">${place.city}, ${place.state}</span>
+                            <span class="population">${place.population}</span>
+                        </li>`
+                    );
+                }).join ('');
+    
 
             // 3. display on suggestions portion
-
                 // console.log(html);
+                suggestions.innerHTML = html;
         }
  
 
