@@ -25,13 +25,19 @@
     const suggestions = document.querySelector('.suggestions');
 
     // 1. Need to make an AJAX call with FETCH to get list of cities
+        fetch(endpoint)
             // retreive information in json format
+            .then(blob => blob.json())
             // need to take that list of cities and push it to the array 'cities';
+            .then(data => cities.push(...data));
         // console.log(cities) //check to see if cities has been updated
 
 
     // 2. Need to take a word and filter array of cities to find entries that match
-            // console.log(matchedWord);
+        const findMatch = (word, cities) => {
+            // console.log(word);
+        }
+            
             // filter through the cities array
                 // need a regex so you can input variable into match
 
